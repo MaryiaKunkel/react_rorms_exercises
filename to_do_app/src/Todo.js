@@ -3,8 +3,10 @@ import React from "react";
 function Todo({ id, onDelete, text }) {
   return (
     <div>
-      <div>{text}</div>
-      <button onClick={() => onDelete(id)}>X</button>
+      <div data-testid="task">{text}</div>
+      <button data-testid="delete" onClick={() => onDelete(id)}>
+        X
+      </button>
     </div>
   );
 }
